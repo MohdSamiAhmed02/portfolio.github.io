@@ -58,7 +58,7 @@ const sendMessage = async () => {
 
     // Send to backend and get AI response
     try {
-        const response = await fetch("http://localhost:3001/chat", {
+        const response = await fetch("https://portfolio-github-io-ysdl.onrender.com/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: userText })
