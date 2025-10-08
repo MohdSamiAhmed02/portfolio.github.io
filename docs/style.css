@@ -567,6 +567,83 @@ h1, h2, h3, h4, .logo, .navbar a {
 }
 
 /* ----------------------------------
+   6. Skills Section (New)
+   ---------------------------------- */
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.skills-category {
+    flex: 1; /* Allows columns to grow evenly */
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.skills-category:hover {
+    transform: translateY(-5px);
+}
+
+.skills-category h3 {
+    color: #007bff; /* Use your primary brand color */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #eee;
+}
+
+.skills-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-category li {
+    padding: 8px 0;
+    font-size: 0.95em;
+    color: #444;
+    border-bottom: 1px dashed #f0f0f0;
+}
+
+.skills-category li:last-child {
+    border-bottom: none;
+}
+
+.skills-category li strong {
+    font-weight: 600;
+    color: #222;
+}
+
+
+/* ----------------------------------
+   7. Responsive Adjustments for Skills
+   ---------------------------------- */
+
+/* Tablet View (Max Width: 992px) */
+@media (max-width: 992px) {
+    .skills-container {
+        flex-wrap: wrap; /* Wrap skills categories */
+        gap: 20px;
+    }
+    .skills-category {
+        flex-basis: calc(50% - 10px); /* Two columns on tablets */
+    }
+}
+
+/* Mobile View (Max Width: 600px) */
+@media (max-width: 600px) {
+    .skills-category {
+        flex-basis: 100%; /* Single column on mobile */
+    }
+}
+
+
+/* ----------------------------------
    5. Responsive Media Queries
    ---------------------------------- */
 
